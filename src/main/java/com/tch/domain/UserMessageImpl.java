@@ -17,7 +17,7 @@ import java.util.Date;
 @Table(name = "u_message")
 @Data
 @Builder
-public class UserMessage {
+public class UserMessageImpl {
     
     
     @Id

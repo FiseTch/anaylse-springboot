@@ -1,6 +1,6 @@
 package com.tch.responsity;
 
-import com.tch.domain.UserGroup;
+import com.tch.domain.UserGroupImpl;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @version 1.0
  * @time 2018/8/16 10:15
  */
-public interface TClassRepository extends JpaRepository<UserGroup,Integer> {
+public interface TClassRepository extends JpaRepository<UserGroupImpl,Integer> {
 }

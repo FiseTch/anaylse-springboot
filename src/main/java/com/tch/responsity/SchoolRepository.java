@@ -1,6 +1,6 @@
 package com.tch.responsity;
 
-import com.tch.domain.UserSchool;
+import com.tch.domain.UserSchoolImpl;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @version 1.0
  * @time 2018/8/16 10:15
  */
-public interface SchoolRepository extends JpaRepository<UserSchool,Integer> {
+public interface SchoolRepository extends JpaRepository<UserSchoolImpl,Integer> {
 }

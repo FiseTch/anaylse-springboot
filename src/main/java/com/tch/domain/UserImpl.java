@@ -22,6 +22,7 @@ import java.util.Set;
 @Builder
 public class UserImpl implements User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_no", nullable = false)
     @NotNull
     private String userNo;
@@ -37,16 +38,16 @@ public class UserImpl implements User {
     private String email;
     
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<UserAddress> addressSet;
+    private Set<UserAddressImpl> addressSet;
     
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<UserSchool> schoolSet;
+    private Set<UserSchoolImpl> schoolSet;
     
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<UserGroup> groupSet;
+    private Set<UserGroupImpl> groupSet;
     
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<UserMessage> messageSet;
+    private Set<UserMessageImpl> messageSet;
     
     @Override
     public void add(UserImpl user) {

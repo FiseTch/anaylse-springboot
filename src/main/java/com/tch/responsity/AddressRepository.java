@@ -1,6 +1,6 @@
 package com.tch.responsity;
 
-import com.tch.domain.UserAddress;
+import com.tch.domain.UserAddressImpl;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @version 1.0
  * @time 2018/8/16 10:13
  */
-public interface AddressRepository extends JpaRepository<UserAddress,Integer> {
+public interface AddressRepository extends JpaRepository<UserAddressImpl,Integer> {
 }

@@ -16,7 +16,7 @@ import java.util.Date;
 @Table(name = "u_group")
 @Data
 @Builder
-public class UserGroup {
+public class UserGroupImpl {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "u_school")
 @Data
 @Builder
-public class UserSchool {
+public class UserSchoolImpl {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
