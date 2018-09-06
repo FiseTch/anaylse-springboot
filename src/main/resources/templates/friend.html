@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>好友动态</title>
+		<link type="text/css" rel="stylesheet" th:href="@{css/friend.css}" />
+		<link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+		<script type="text/javascript" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+		<script th:src="@{/js/friend.js}" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="nav">
+			<ul>
+				<li id="li1" ><a th:href="@{/homePage.do}">首页</a></li>
+				<li id="li2" class="activeLi"><a th:href="@{/friend.do}">好友动态</a></li>
+				<li id="li3" ><a th:href="@{/killTime.do}">碎言碎语</a></li>
+				<li id="li4" ><a th:href="@{/index.do}">我的主页</a></li>
+			</ul>
+		</div>
+		
+		<div class="head">
+			<img th:src="@{/image/head.jpg}"  />
+		</div>
+		
+		<div id="pics">
+			<div class="row">
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic1.jpg}" />
+					<div class="content">
+						<p>"... tomorrow_is_another_day!"</p>
+						<span class="glyphicon glyphicon-share">50</span>
+						<span class="glyphicon glyphicon-heart">77</span>
+						<span class="glyphicon glyphicon-comment">85</span>
+					</div>
+					<div class="user">
+						<img src="../static/image/headImg1.jpg" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;sun太阳婆婆</span>
+						<p class="text">远方等待着一个永远的白瑞德。</p>
+						<br/>
+					</div>
+				</div>
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic2.jpg}" />
+					<div class="content">
+						<p>ThaiFood</p>
+						<span class="glyphicon glyphicon-share">11</span>
+						<span class="glyphicon glyphicon-heart">21</span>
+						<span class="glyphicon glyphicon-comment">96</span>
+					</div>
+					<div class="user">
+						<img th:src="@{/image/headImg2.png}" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;牛芳-whatever</span>
+						<p class="text">等待一场泰国菜的盛宴</p>
+						<br/>
+					</div>
+				</div>
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic3.jpg}" />
+					<div class="content">
+						<p>超有爱的一对小萌物!好想一起抱回家!</p>
+						<span class="glyphicon glyphicon-share">11</span>
+						<span class="glyphicon glyphicon-heart">12</span>
+						<span class="glyphicon glyphicon-comment">95</span>
+					</div>
+					<div class="user">
+						<img th:src="@{/image/headImg3.png}" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;索拉的记忆</span>
+						<p class="text">想起广外的网红猫</p>
+						<br/>
+					</div>
+				</div>
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic4.jpg}" />
+					<div class="content">
+						<p>带娃娃的猫</p>
+						<span class="glyphicon glyphicon-share">11</span>
+						<span class="glyphicon glyphicon-heart">21</span>
+						<span class="glyphicon glyphicon-comment">2</span>
+					</div>
+					<div class="user">
+						<img th:src="@{/image/headImg1.jpg}" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;sun太阳婆婆</span>
+						<p class="text">萌化了。</p>
+						<br/>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row">				
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic5.jpg}" />
+					<div class="content">
+						<p>故梦【女翻 双笙】颠覆你的听觉体验</p>
+						<span class="glyphicon glyphicon-share">11</span>
+						<span class="glyphicon glyphicon-heart">21</span>
+						<span class="glyphicon glyphicon-comment">2</span>
+					</div>
+					<div class="user">
+						<img th:src="@{/image/headImg4.png}" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;北悠梓弥</span>
+						<p class="text">喜欢二笙。</p>
+						<br/>
+					</div>
+				</div>
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic7.jpg}" />
+					<div class="content">
+						<p>如果你还在 会不会伸手拥抱我</p>
+						<span class="glyphicon glyphicon-share">11</span>
+						<span class="glyphicon glyphicon-heart">21</span>
+						<span class="glyphicon glyphicon-comment">2</span>
+					</div>
+					<div class="user">
+						<img th:src="@{/image/headImg5.png}" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;鼠不停</span>
+						<p class="text">没有你的春天就要来了</p>
+						<br/>
+					</div>
+				</div>
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic6.jpg}" />
+					<div class="content">
+						<p>梦想与荣耀同在</p>
+						<span class="glyphicon glyphicon-share">9</span>
+						<span class="glyphicon glyphicon-heart">8</span>
+						<span class="glyphicon glyphicon-comment">2</span>
+					</div>
+					<div class="user">
+						<img th:src="@{/image/headImg6.png}" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;刀刀cr</span>
+						<p class="text">死宅的荣耀</p>
+						<br/>
+					</div>
+				</div>	
+				<div class="pic col-md-3 col ">
+					<img th:src="@{/image/pic8.jpg}" />
+					<div class="content">
+						<p>难忘的因你太念念才难忘</p>
+						<span class="glyphicon glyphicon-share">11</span>
+						<span class="glyphicon glyphicon-heart">7</span>
+						<span class="glyphicon glyphicon-comment">2</span>
+					</div>
+					<div class="user">
+						<img th:src="@{/image/headImg4.png}" class="img-circle"/>
+						<span class="name">&nbsp;&nbsp;北悠梓弥</span>
+						<p class="text">我看过你的背影  清晰却不熟悉</p>
+						<br/>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="addMoreNote">
+				
+			</div>
+						
+		</div>
+		
+		<div class="themore">
+			<button id="lookMoreButton" >查看更多</button>
+		</div>
+		<div class="noMoreDiv">
+			<span id="noMore">再无更多内容</span>
+		</div>
+				
+		<footer class="foot">
+			<div class="container" >
+				<p >关于我 | 意见建议 | 其他问题</p>
+				<p >All rights reserved. Power By Pudding</p>
+			</div>
+		</footer>
+		
+	</body>
+</html>

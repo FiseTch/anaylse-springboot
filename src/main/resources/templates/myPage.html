@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>我的主页</title>
+		<link type="text/css" rel="stylesheet" th:href="@{css/myPage.css}" />
+		<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+		<script type="text/javascript" th:src="@{js/jquery-3.1.1.min.js}"></script>
+		<script th:src="@{js/myPage.js}" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+        <div id="nav">
+            <ul >
+                <li id="li1" ><a th:href="@{/homePage.do}">首页</a></li>
+                <li id="li2" ><a th:href="@{/friend.do}">好友动态</a></li>
+                <li id="li3" ><a th:href="@{/killTime.do}">碎言碎语</a></li>
+                <li id="li4" class="activeLi"><a th:href="@{/index.do}">我的主页</a></li>
+            </ul>
+        </div>
+
+        <div class="head">
+            <img th:src="@{image/head.jpg}"  />
+        </div>
+
+        <div class="user">
+            <img src="image/headImg2.jpg" class="img-circle headImg"/>
+            <div class="right">
+                <span class="userName">测试专用--Tong</span><br/>
+                <span class="motto">爱学习</span><br/>
+                <img src="image/profession.png"/><span>&nbsp;管理科学与工程</span><br/>
+                <img src="image/female.png"/>
+            </div>
+        </div>
+
+        <div class="classify">
+            <div class="tags">
+                <ul>
+                    <li class="tagItem show" onclick="changeLi(1);changeDiv(1)">动态</li>
+                    <li class="tagItem" onclick="changeLi(2);changeDiv(2)">相册&nbsp;<span>4</span></li>
+                    <li class="tagItem" onclick="changeLi(3);changeDiv(3)">留言板&nbsp;<span>3</span></li>
+                </ul>
+                <hr/>
+            </div>
+            <div class="active" id="active">
+                <div class="myTag">
+                    <p>我的动态</p>
+                    <hr/>
+                </div>
+                <div class="trend">
+                    <p class="action">发表了文章</p>
+                    <p class="title">那些年我们错过的爱情</p>
+                    <div class="ariticle">
+                        <img src="image/GDUFS.jpg" />
+                        <p>2012年，来到了这个陌生的城市，开始传说中象牙塔的生活。爸妈送完我以后毅然决然就走掉了。 记得很清楚，我一路走一路流眼泪回到的宿舍。 当时觉得很孤独， 太陌生的一座城，太渺小的我一个人。</p>
+                    </div>
+                </div>
+                <div class="trend">
+                    <p class="action">加入了圈子</p>
+                    <p class="title">四月是你的谎言</p>
+                    <div class="ariticle">
+                        <img src="image/pic7.jpg" />
+                        <p>新川直司原著漫画，连载于讲谈社《月刊少年Magazine》。改编动画剧由A-1 Picture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden" id="community">
+                <div class="myTag">
+                    <p>我的相册</p>
+                    <hr/>
+                </div>
+                <div class="pics">
+                    <div class="media col-md-3 col">
+                        <div class="pull-left">
+                            <img src="image/GDUFS.jpg" />
+                        </div>
+                        <div class="media-body">
+                            <p><a href="photo.php">广外</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-md-3 col">
+                        <div class="pull-left">
+                            <img src="image/pic5.jpg" />
+                        </div>
+                        <div class="media-body">
+                            <p><a href="photo.php">古风圈</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-md-3 col">
+                        <div class="pull-left">
+                            <img src="image/pic7.jpg" />
+                        </div>
+                        <div class="media-body">
+                            <p><a href="photo.php">四月是你的谎言</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-md-3 col">
+                        <div class="pull-left">
+                            <img src="image/pic9.jpg" />
+                        </div>
+                        <div class="media-body">
+                            <p><a href="photo.html">诗诗诗爷</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden" id="leaveMes">
+                <div class="myTag">
+                    <p>我的留言</p>
+                    <hr/>
+                </div>
+                <div class="words">
+                    <div class="word">
+                        <img src="image/headImg1.jpg" class="img-circle"/>
+                        <p>小黄瓜，hhhh，好久没来了</p>
+                        <hr/>
+                    </div>
+                    <div class="word">
+                        <img src="image/headImg2.png" class="img-circle"/>
+                        <p>阿桌，五一见</p>
+                        <hr/>
+                    </div>
+                    <div class="word">
+                        <img src="image/headImg3.png" class="img-circle"/>
+                        <p>辣鸡</p>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="concern">
+            <div>
+                <span>关注了</span>
+                <span>|</span>
+                <span>关注者</span>
+            </div>
+            <div class="number">
+                <span>3</span>
+                <span></span>
+                <span>1</span>
+            </div>
+        </div>
+
+        <div class="visitor">
+            <p class="mes">个人主页被浏览78次</p>
+            <hr/>
+            <div class="people">
+                <div class="peo">
+                    <p>最近访客</p>
+                    <hr/>
+                </div>
+                <img src="image/headImg1.jpg"/>
+                <img src="image/headImg2.png"/>
+                <img src="image/headImg3.png"/>
+                <img src="image/headImg4.png"/>"
+            </div>
+        </div>
+
+    <footer class="foot">
+			<div class="container">
+				<p >关于我 | 意见建议 | 其他问题</p>
+				<p >All rights reserved. Power By Pudding</p>
+			</div>
+		</footer>
+		
+	</body>
+</html>

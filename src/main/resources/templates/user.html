@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户录入</title>
+</head>
+<body>
+<div>
+    <ul>
+        <li>您申请的职位是：<span class="fontBold" id="job_type" cateid="2110" disid="13605">家教</span>
+        </li>
+        <li>
+
+                <i class="resumeRichIcon redTipIcon"></i><span>姓&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+
+                <input type="text" id="resumename" value=""/>
+
+            <div class="sex-group">
+                <span class="form-sex-nan form-sex" onclick="MiniBase.chgSex(0,this)">男</span>
+                <span class="form-sex-nv form-sex" onclick="MiniBase.chgSex(1,this)">女 </span>
+            </div>
+            <section>
+                <select>
+
+                </select>
+            </section>
+            <div class="div_input ageInp">
+                <input type="text" id="resumeage"/>
+            </div>
+            <div>岁</div>
+            <div class="wrongTip">
+                <span id="rem_age"></span>
+                <span id="rem_sex"></span>
+                <span id="rem_name"></span>
+            </div>
+        </li>
+        <li>
+            <div class="liTit">
+                <i class="resumeRichIcon redTipIcon"></i><span>工作经验</span>
+            </div>
+            <div class="selParent w100">
+                <div class="select-box">
+                    <a class="select-trigger-exp select-trigger" href="javascript:void(0);">
+                        <span id="workYears" class="select-val" data-value="-1">请选择</span>
+                        <input type="text" value="-1" id="workExp" hidden="true"/>
+                        <i class="drop-triangle"></i>
+                    </a>
+                    <ul class="select-list">
+                        <li class="select-item"><a href="javascript:void(0)" data-value="0">无经验</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="1">应届生</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="2">1年以下</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="3">1-2年</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="4">3-5年</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="5">6-10年</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="6">10年以上</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="liTit">
+                <i class="resumeRichIcon redTipIcon"></i><span>学历</span>
+            </div>
+            <div class="selParent w100">
+                <div class="select-box">
+                    <a class="select-trigger-edu select-trigger" href="javascript:void(0);">
+                        <span id="education" class="select-val" data-value="-1">请选择</span>
+                        <input type="text" value="-1" id="eduExp" hidden="true"/>
+                    </a>
+                    <ul class="select-list">
+                        <li class="select-item"><a href="javascript:void(0)" data-value="1">高中以下</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="2">高中</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="3">中专/技校</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="4">大专</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="5">本科</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="6">硕士</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="7">博士</a></li>
+                        <li class="select-item"><a href="javascript:void(0)" data-value="8">MBA/EMBA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrongTip">
+                <span id="rem_work"></span>
+                <span id="rem_edu"></span>
+            </div>
+        </li>
+        <li>
+            <div class="liTit">
+                <i class="resumeRichIcon redTipIcon"></i><span>介绍自己</span>
+            </div>
+            <textarea name="intr" id="rBright"
+                      onfocus="if(this.innerHTML=='说说你的优势和技能，可大大增加面试机会哦！'){this.innerHTML=''; this.style.color='#404040';}"
+                      onblur="if(this.innerHTML==''){this.innerHTML='说说你的优势和技能，可大大增加面试机会哦！';this.style.color='#999';}">说说你的优势和技能，可大大增加面试机会哦！</textarea>
+            <div class="wrongTip">
+                <span id="rem_intr"></span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>主页</title>
+		<link type="text/css" rel="stylesheet" th:href="@{css/homePage.css}" />
+		<link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+		<script type="text/javascript" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+		<script th:src="@{/js/homePage.js}" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="nav">
+			<ul>
+				<li id="li1" class="activeLi"><a th:href="@{/homePage.do}">首页</a></li>
+				<li id="li2" ><a th:href="@{/friend.do}">好友动态</a></li>
+				<li id="li3" ><a th:href="@{/killTime.do}">碎言碎语</a></li>
+				<li id="li4" ><a th:href="@{/index.do}">我的主页</a></li>
+			</ul>
+		</div>
+		
+		<div class="pic" id="pic">
+			<img th:src="@{/static/image/homePage1.jpg}"  />
+		</div>
+		
+		<div class="word">
+			<!--对图标的禁用-->
+			<!--<span class="glyphicon glyphicon-camera webIcon"></span><br/>-->
+			<span class="author">Tongch</span><br/>
+			<div class="explain">
+				<span >一个记录和分享喜好的个人博客</span><br/>
+				<span >我睡着了 </span><br/>
+				<span >可我的心仍醒着 </span><br/>
+				<span >它注视着星星&nbsp;&nbsp;天空&nbsp;&nbsp;舵轮 </span><br/>
+				<span >注视着海水在舵上花开朵朵</span><br/>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			display();
+		</script>
+	</body>
+</html>

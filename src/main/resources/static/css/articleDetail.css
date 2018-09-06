@@ -1,0 +1,262 @@
+body {
+	font-family:"楷体","微软雅黑", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "楷体";
+}
+
+#nav ul {
+	z-index: 100;
+	position: absolute;
+	left:305px;
+	top:18px;
+}
+
+#nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right:18px;
+	width: 160px;
+	height: 80px;
+	text-align: center;
+	font-size: 25px;
+	background-color: rgba(255, 255, 255, 0.4); 
+}
+
+#nav .activeLi {
+	background-color: rgba(255, 255, 255, 1); 
+}
+
+#nav ul li a {
+	display: block;
+	padding-top: 22px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#nav .activeLi a {
+	color: #5F9073;
+}
+
+.head img {
+	position: relative;
+	z-index: 1;
+	width:100%;
+}
+
+#wordContent {
+	margin-left: 150px;
+	width: 1200px;
+}
+
+#wordContent .head {
+	clear: both;
+}
+
+.head .title {
+	margin: 50px 0px 5px 50px;
+	font-size: 25px;
+	word-wrap: break-word;
+}
+
+.head .author {
+	margin-left: 50px ;
+	color: #CCCCCC;
+	font-size: 15px;	
+}
+
+#wordContent .date {
+	margin:20px 0px 0px 50px;
+	width: 300px;
+}
+
+.day1,.day2 {
+	clear: both;
+	width: 1200px;
+}
+
+.date .tagSize {
+	margin-right: 5px;
+	font-size: 25px;
+}
+
+.date .dayDate,.date .dayIndex {
+	font-size: 14px;
+}
+
+.date .cutLine {
+	width: 1100px;
+	border: none;
+	margin-left: -100px;
+	padding-top: 40px;
+	border-bottom: 1px dotted #00344B !important;
+}
+
+#wordContent .picAndComment {
+	float: left;
+	margin: 20px 0px 0px 50px;
+	width: 500px;
+}
+
+.picAndComment .picComment {
+	width: 500px;
+	margin: 10px 0px;
+	font-size: 17px;
+	word-wrap:break-word; 
+	word-break:break-all; 
+	display: inline-block;
+}
+
+.picAndComment .beWriteImg {
+	width: 500px;
+	height:340px;
+}
+
+#wordContent .addressComment {
+	float: right;	
+}
+
+.addressComment .commentPicSizeLeft {
+	margin-left: 50px;
+	width: 30px !important;
+	height: 22px !important;
+}
+
+.addressComment .commentPicSizeRight {
+	margin-left: 360px;
+	width: 30px !important;
+	height: 22px !important;
+}
+
+.addressComment .addressText {
+	width: 520px;
+	margin-left: 70px;
+	margin-top:20px;
+	line-height: 2em;
+	font-family: "楷体" !important;
+	font-size: 15px;
+	color: #000000;
+	border: none !important;
+	border-radius:0px ;
+	background-color: #FFFFFF;
+}
+
+.node {
+	float: right;
+	margin: 20px 230px 0px 50px;
+	width:350px;
+}
+
+.node .nodeTag {
+	color: #00344B;
+	font-size: 25px;
+	margin-left: 50px;
+	margin-bottom: 5px;
+}
+
+.node .word p {
+	margin-left: 80px;
+	font-size: 12px !important;
+	color: #000000;
+	line-height: 1em;
+}
+
+.heart {
+	clear: both;
+	margin: 0 auto;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;      
+	-moz-border-radius: 50%;      
+	-webkit-border-radius: 50%;  
+	font-size: 20px;
+	text-align: center;
+	background-color: #5F9073;
+}
+
+.heart span {
+	margin-top: 20px;
+	color: #FFFFFF;
+}
+
+.comment {
+	clear: both;
+	margin-left: 180px;
+	padding-top: 50px;
+	width: 750px;
+}
+
+.comment .user  {
+	clear: both;
+	position: relative;
+}
+
+.comment .user img {
+	width: 50px;
+	height: 50px;
+}
+
+.userComment{
+	padding-top: 5px;
+	padding-left:20px;
+	line-height:25px;
+	font-size:14px;
+}
+
+.userNameOut {
+	width: 60px;
+	height:17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size:12px;
+}
+
+.userNameOver {
+	width: 60px;
+	height:17px;
+	font-size:12px;
+}
+
+.time {
+	position: absolute;
+	right:5px;
+	top:5px;
+	font-size: 10px;
+}
+
+.addComment input {
+	margin:20px 0px 0px 180px;
+	width: 750px;
+	height: 50px;
+	outline: none !important;
+}
+
+.addComment button {
+	margin: 10px 0px 30px 870px;
+	width: 60px;
+	height: 25px;
+	border-radius: 0px;
+	border-style:none ;
+	background-color:#5F9073;
+	color: #FFF;
+	outline:none;
+}
+
+.foot .container {
+	clear: both;
+	margin-top: 50px;
+	padding: 16px;
+	text-align: center;
+	width: 100%;
+	background-color: #5F9073;
+}
+
+.foot .container p {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #FFFFFF;
+}

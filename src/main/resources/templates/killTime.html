@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>碎言碎语</title>
+		<link type="text/css" rel="stylesheet" th:href="@{/css/killTime.css}" />
+		<link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+		<script type="text/javascript" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+		<script th:src="@{/js/killTime.js}" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="nav">
+			<ul >
+				<li id="li1" ><a th:href="@{/homePage.do}">首页</a></li>
+				<li id="li2" ><a th:href="@{/friend.do}">好友动态</a></li>
+				<li id="li3" class="activeLi"><a th:href="@{/killTime.do}">碎言碎语</a></li>
+				<li id="li4" ><a th:href="@{/index.do}">我的主页</a></li>
+			</ul>
+		</div>
+		
+		<div class="head">
+			<img th:src="@{/image/head.jpg}"  />
+		</div>
+		
+		<div class="mes">
+			<div class="user">
+				<img th:src="@{/image/headImg2.jpg}" class="img-circle"/>
+				<div class="brief">
+					<p class="userName"><a href="myPage.html">爱吃西瓜的小黄瓜</a></p>
+					<p class="motto">逃避可耻但有用</p>
+				</div>
+			</div>	
+			<div class="classify">
+				<div class="arti">
+					<p class="txt">全部文章</p>
+				</div>
+				<ul>
+					<li><span class="glyphicon glyphicon-heart">(16)</span></li>
+					<li>美食(2)</li>
+					<li>旅游(1)</li>
+					<li>动漫(3)</li>
+					<li>古风圈(1)</li>
+					<li>暴漫(0)</li>
+					<li>GitHua(0)</li>
+					<li>日剧(1)</li>
+				</ul>
+			</div>
+		</div>
+		
+		<dic id="notes">
+			<div class="title">
+				<p>最新文章</p>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">那些年错过的广外</p>
+				</a>
+				<div class="date">
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2017-04-23</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">旅游</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/GDUFS.jpg}" />
+					<div >
+						<p>2012年，来到了这个陌生的城市，开始传说中象牙塔的生活。爸妈送完我以后毅然决然就走掉了。 记得很清楚，我一路走一路流眼泪回到的宿舍。 当时觉得很孤独， 太陌生的一座城，太渺小的我一个人。</p>
+					</div>			
+				</div>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">肥美鲜腴不容错过的【火腿蒜粒粉丝蒸扇贝王】</p>
+				</a>
+				<div class="date">
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2017-04-11</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周二&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">美食</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/shanbei.jpg}" />
+					<div >
+						<p>每年三月份左右，带着饱饱囊囊的籽粒儿的扇贝王上市了，每个直径得有五厘米左右，又大又嫩。最爱最爱那片金色的尖尖，肥腴鲜嫩无可比拟，为海鲜的上上品。越是鲜味出众的食材，越是要用简单的方法加工凸显鲜味本质。查了一圈方子，中国的外国的都看了不少，发现最流行的还是经典的粉丝蒸扇贝。国外的很多菜谱网站都介绍这种做法，其妙处可想而知。 </p>
+					</div>			
+				</div>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">DIY火遍全城的酸奶捞--水果酸奶捞</p>
+				</a>
+				<div class="date">
+					<!--<hr class="cutLine"/>-->
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2017-04-26</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">美食</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/shuiguolao.jpg}" />
+					<div >
+						<p>最近一年多的时间，酸奶捞在朋友圈里都刷屏了，从最开始的一枝独秀，到现在满屏都是酸奶捞，真的是火遍全城。
+							吃过几家的，30-35左右一大盒，小盒的20几块，口味差不太多。这个之所以这么火，和制作简单几乎没有技术要求也有关系，完全不会做饭的人也能Hold住啊，So easy~~
+						</p>
+					</div>			
+				</div>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">吹响吧上低音号 A</p>
+				</a>
+				<div class="date">
+					<!--<hr class="cutLine"/>-->
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2017-02-15</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周三&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">动漫</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/A.jpg}" />
+					<div >
+						<p>觉得没有第一季好看~~尤其是4集之前的这个剧情感觉有一种违和感明日香的那段还好~~而且老是一首曲子也会腻的嘛.... </p>
+					</div>			
+				</div>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">春天马上就要来了，让我和你相遇的春天，就要来了，再也没有你的春天，就要来了</p>
+				</a>
+				<div class="date">
+					<!--<hr class="cutLine"/>-->
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2017-02-14</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周二&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">动漫</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/pic7.jpg}" />
+					<div >
+						<p>敬启  有马公生先生         刚刚还和你在一起，现在却给你写信，感觉怪怪的。         你是个很过分的人，笨蛋，榆木脑袋，呆瓜。         我第一次见到你，是在我5岁的时候，在当时我学钢琴的教室举行的钢琴赛上。一个笨拙的孩子上场了，他一屁股撞在椅子上，惹得台下观众忍俊不禁。但是当他面对比他还要庞大的钢琴，弹奏出第一个音的时候，他便成了我的憧憬。 </p>
+					</div>			
+				</div>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">《锦鲤抄》--云の泣/ 银临</p>
+				</a>
+				<div class="date">
+					<!--<hr class="cutLine"/>-->
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2016-06-26</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">古风圈</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/jinlichao.jpg}" />
+					<div >
+						<p>云の泣/ 银临 演唱的《锦鲤抄》是我近期单曲循环并设成了手机铃声的歌曲
+							百听不厌这个词我已经遗忘很久
+							一开始是因为书友疯转的全民锦鲤抄活动
+							尤其是看过《锦鲤抄》的方案，联想到古言的各种对爱的执念，到副歌部分总有飙泪的冲动
+							每一段都让人感受到微凉的爱意和无奈，以及得不到的缠绵
+ 						</p>
+					</div>			
+				</div>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">不是好想告诉你，我，一直在告诉你。</p>
+				</a>
+				<div class="date">
+					<!--<hr class="cutLine"/>-->
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2016-06-25</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周六&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">动漫</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/linzuo.jpg}" />
+					<div >
+						<p> 这部剧跟《好想》最大的区别就是表白模式。看到水谷的善良喜欢上她，就毫无遮掩的表白。放学后相约去吃文字烧，又忍不住强吻水谷。///_/// 这种表达对于爽子和风早来说，一直处于害羞脸红模式中~~~      
+     						“只要和雫在一起，吃什么都很美味啊。” 就算是这样简单的心情，也还是想告诉你。
+    						“自幼能够动摇我的只有成绩。无论对人还是对事，我都没有兴趣。”
+						</p>
+					</div>			
+				</div>
+			</div>
+			<div class="note">
+				<a href="../static/articleDetail.html">
+					<p class="title">如何评价日剧《逃跑可耻但有用》（逃げるは恥だが役に立つ）？</p>
+				</a>
+				<div class="date">
+					<!--<hr class="cutLine"/>-->
+					<h6 >
+						<span class="glyphicon glyphicon-calendar tagSize"></span>
+						<span class="dayIndex">2016-06-19</span>
+						<span class="dayDate" >&nbsp;&nbsp;|&nbsp;&nbsp;周日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="glyphicon glyphicon-tags tagSize"></span>
+						<span class="tag">日剧</span>
+					</h6>
+				</div>	
+				<div class="ariticle">
+					<img th:src="@{/image/taobi.jpg}" />
+					<div >
+						<p>
+							本来,你已经习惯了每天早上一个人挤地铁上班，习惯了下班后一个人找个角落解决晚饭，也习惯了晚上一个人呆在房间对着电脑，本来你已经习惯了这样的孤单寂寞，也决定了接受上天安排的这个平凡又平淡的人生。突然，又被这剧撩起了对未来的一丝期待。内心里好想也拥有一个这样美好到甘愿让你为之奉献一切的女孩。
+						</p>
+					</div>			
+				</div>
+			</div>
+		
+		</dic>
+		
+		
+		<footer class="foot">
+			<div class="container" >
+				<p >关于我 | 意见建议 | 其他问题</p>
+				<p >All rights reserved. Power By Pudding</p>
+			</div>
+		</footer>
+		
+	</body>
+</html>

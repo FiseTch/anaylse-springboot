@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta charset="UTF-8">
+		<title>文章详情</title>
+		<link type="text/css" rel="stylesheet" href="css/articleDetail.css" />
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/articleDetail.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="nav">
+			<ul >
+				<li id="li1" ><a th:href="@{/templates/homePage.html}">首页</a></li>
+				<li id="li2" ><a th:href="@{/templates/friend.html}">好友动态</a></li>
+				<li id="li3" ><a th:href="@{/templates/killTime.html}">碎言碎语</a></li>
+				<li id="li4" ><a th:href="@{/static/index.html}">我的主页</a></li>
+			</ul>
+		</div>
+		
+		<div class="head">
+			<img src="image/head.jpg"  />
+		</div>
+		
+		<div id="wordContent">
+			<div class="head">
+				<p class="title">那些年我们错过的广外</p>	
+				<p class="author">by 爱吃西瓜的小黄瓜</p>
+			</div>
+
+			<div class="date">
+				<hr class="cutLine"/>
+				<h6 >
+					<span class="glyphicon glyphicon-camera tagSize"></span>
+					<span class="dayIndex">第一天</span>
+					<span class="dayDate">| 2017-04-22 周六</span>
+				</h6>
+			</div>	
+						
+			<div class="day1">
+				<div class="picAndComment">
+					<img class="beWriteImg" src="image/GDUFS.jpg">
+					<p class="picComment">
+						<span class="glyphicon glyphicon-comment"></span>
+						&nbsp2002年，来到了这个陌生的城市，开始传说中象牙塔的生活。 
+						爸妈送完我以后毅然决然就走掉了。 
+						记得很清楚，我一路走一路流眼泪回到的宿舍。 当时觉得很孤独， 太陌生的一座城，太渺小的我一个人。
+					</p>
+				</div>	
+				<div class="addressComment">
+					<img class="commentPicSizeLeft" src="image/commaLeft.png" />
+					<pre class="addressText">
+	没有北外上外的名声在外， 
+	不是211， 
+	也不是985， 
+	没有什么太知名的校友；
+	只是坐落在白云山脚下， 
+	有条河流淌着， 
+	高大茂密的白千层， 
+	就这么低调，就够了~。
+					</pre>
+					<img class="commentPicSizeRight" src="image/commaRight.png"/>
+				</div>
+			</div>
+						
+			<div class="node">
+				<span class="glyphicon glyphicon-map-marker nodeTag"></span>
+				<div class="word">
+					<p >广东外语外贸大学</p>
+					<p >Guangdong University of Foreign Studies </p>
+				</div>
+			</div>
+			
+			<div class="day1">
+				<div class="picAndComment">
+					<img class="beWriteImg" src="image/GDUFS3.jpg">
+					<p class="picComment">
+						<span class="glyphicon glyphicon-comment"></span>
+						第一个圣诞节，这幅画就贴在我们宿舍门口
+					</p>
+				</div>	
+			</div>
+			
+			<div class="day1">
+				<div class="picAndComment">
+					<img class="beWriteImg" src="image/GDUFS4.jpg">
+					<p class="picComment">
+						<span class="glyphicon glyphicon-comment"></span>
+						前身这是一片网球场，后来推掉以后就变成图书馆
+					</p>
+				</div>	
+			</div>
+			
+			<div class="day1">
+				<div class="picAndComment">
+					<img class="beWriteImg" src="image/GDUFS5.jpg">
+					<p class="picComment">
+						<span class="glyphicon glyphicon-comment"></span>
+						白千层和草坪
+					</p>
+				</div>	
+			</div>
+			
+			<div class="date">
+				<hr class="cutLine"/>
+				<h6 >
+					<span class="glyphicon glyphicon-camera tagSize"></span>
+					<span class="dayIndex">第二天</span>
+					<span class="dayDate">| 2017-04-23 周日</span>
+				</h6>
+			</div>	
+			
+			<div class="day2">
+				<div class="picAndComment">
+					<img class="beWriteImg" src="image/GDUFS2.jpg">
+					<p class="picComment">
+						<span class="glyphicon glyphicon-comment"></span>
+						白云山脚下
+					</p>
+				</div>			
+				<div class="addressComment">
+					<img class="commentPicSizeLeft" src="image/commaLeft.png" />
+					<pre class="addressText">
+	自从有个大学城，原本的校园就安静了许多。
+	看不到嘻嘻闹闹的大一新生， 
+	看不到熙熙攘攘的毕业典礼， 
+	留下的只剩下回忆。
+					</pre>
+					<img class="commentPicSizeRight" src="image/commaRight.png"/>
+				</div>
+			</div>
+			
+			<div class="day2">
+				<div class="picAndComment">
+					<img class="beWriteImg" src="image/GDUFS6.jpg">
+					<p class="picComment">
+						<span class="glyphicon glyphicon-comment"></span>
+						一地的紫荆花
+					</p>
+				</div>	
+			</div>
+			
+		</div>
+		
+		<div class="heart">
+			<span class="glyphicon glyphicon-heart"></span></br>
+			<span >6</span>
+		</div>
+		
+		<div class="comment">
+			<div class="user">
+				<hr class="fengexian"/>
+				<span class="time">2017-04-23 11:15:02</span>
+				<div class="media">
+					<div class="pull-left">
+						<div >
+							<img src="image/headImg1.jpg" class="img-circle">
+						</div>						
+						<div id="userName" class="userNameOut">sun太阳婆婆</div>
+					</div>
+					<div class="media-body">
+						<p class="userComment">
+							<span class="userComment">							
+							求小黄瓜多放一些紫荆花图
+							</span>
+						</p>
+					</div>
+				</div>	
+			</div>
+			<div class="user">
+				<hr class="fengexian"/>
+				<span class="time">2017-04-23 12:17:42</span>
+				<div class="media">
+					<div class="pull-left">
+						<div >
+							<img src="image/headImg2.png" class="img-circle">
+						</div>						
+						<div id="userName" class="userNameOut">牛芳-whatever</div>
+					</div>
+					<div class="media-body">
+						<p class="userComment">
+							<span class="userComment">							
+							怎么没有南校的描述
+							</span>
+						</p>
+					</div>
+				</div>	
+			</div>	
+			<div class="user">
+				<hr class="fengexian"/>
+				<span class="time">2017-04-23 14:12:02</span>
+				<div class="media">
+					<div class="pull-left">
+						<div >
+							<img src="image/headImg4.png" class="img-circle">
+						</div>						
+						<div id="userName" class="userNameOut">北悠梓弥</div>
+					</div>
+					<div class="media-body">
+						<p class="userComment">
+							<span class="userComment">							
+							@牛芳-whatever 作者是北校的，小傻子
+							</span>
+						</p>
+					</div>
+				</div>	
+			</div>	
+		</div>
+		
+		<div class="addComment">
+			<input id="commentText" type="text" placeholder="发表我的评论" /></br>
+			<button type="button" onclick="submit()">提交</button>
+		</div>
+		
+		<footer class="foot">
+			<div class="container" >
+				<p >关于我 | 意见建议 | 其他问题</p>
+				<p >All rights reserved. Power By Pudding</p>
+			</div>
+		</footer>
+		
+	</body>
+</html>
