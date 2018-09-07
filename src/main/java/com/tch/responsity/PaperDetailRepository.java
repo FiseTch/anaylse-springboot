@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @version 1.0
  * @time 2018/9/6 17:24
  */
-public interface PaperDetailRepository extends JpaRepository<PaperDetailImpl,Integer> {
+public interface PaperDetailRepository extends JpaRepository<PaperDetailImpl,String> {
 }

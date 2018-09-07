@@ -14,7 +14,7 @@ public interface PaperService {
      * @Description: 根据主键查询记录
      * @return: Paper
      */
-    PaperImpl getPaperById(String id);
+    PaperImpl getPaperById(int id);
     
     /**
      * @param paper
@@ -34,17 +34,8 @@ public interface PaperService {
      * @Description: 插入记录（属性不允许为空）
      * @return: int
      */
-    int insertPaper(PaperImpl paper);
+    void insertPaper(PaperImpl paper);
     
-    /**
-     * @param paper
-     * @return
-     * @user: tongchaohua
-     * @Title: insertPaperSelective
-     * @Description: 插入记录（除主键外。其他属性允许为空）
-     * @return: int
-     */
-    int insertPaperSelective(PaperImpl paper);
     
     /**
      * @param paper
@@ -54,17 +45,8 @@ public interface PaperService {
      * @Description: 更新记录（除主键外。其他属性允许为空）
      * @return: int
      */
-    int updateByIdSelective(PaperImpl paper);
+    void updateByIdSelective(PaperImpl paper);
     
-    /**
-     * @param paper
-     * @return
-     * @user: tongchaohua
-     * @Title: updateById
-     * @Description: 更新记录（属性不允许为空）
-     * @return: int
-     */
-    int updateById(PaperImpl paper);
     
     /**
      * @param id
@@ -74,5 +56,5 @@ public interface PaperService {
      * @Description: 删除记录
      * @return: int
      */
-    int deleteById(String id);
+    void deleteById(int id);
 }

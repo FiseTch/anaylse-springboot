@@ -5,6 +5,7 @@ import com.tch.responsity.DegreeStaticRepository;
 import com.tch.service.DegreeStatic;
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.data.domain.Example;
 
 import javax.persistence.*;
 
@@ -28,31 +29,23 @@ public class DegreeStaticImpl implements DegreeStatic {
     
     @Override
     public DegreeStaticImpl getDegByAttr(DegreeStaticImpl degreeStatic) {
-        return null;
+        return SpringContextHolder.getBean(DegreeStaticRepository.class).findOne(Example.of(degreeStatic));
     }
     
     @Override
-    public int insertDegreeStatic(DegreeStaticImpl degreeStatic) {
-        return 0;
+    public void insertDegreeStatic(DegreeStaticImpl degreeStatic) {
+        SpringContextHolder.getBean(DegreeStaticRepository.class).saveAndFlush(degreeStatic);
     }
     
-    @Override
-    public int insertDegreeStaticSelective(DegreeStaticImpl degreeStatic) {
-        return 0;
-    }
     
     @Override
-    public int updateByIdSelective(DegreeStaticImpl degreeStatic) {
-        return 0;
+    public void updateByIdSelective(DegreeStaticImpl degreeStatic) {
+        SpringContextHolder.getBean(DegreeStaticRepository.class).saveAndFlush(degreeStatic);
     }
     
-    @Override
-    public int updateById(DegreeStaticImpl degreeStatic) {
-        return 0;
-    }
     
     @Override
-    public int deleteById(Integer id) {
-        return 0;
+    public void deleteById(int id) {
+        SpringContextHolder.getBean(DegreeStaticRepository.class).delete(id);
     }
 }

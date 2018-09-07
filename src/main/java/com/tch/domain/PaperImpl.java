@@ -1,16 +1,23 @@
 package com.tch.domain;
 
+import com.tch.SpringContextHolder;
+import com.tch.responsity.PaperDetailRepository;
+import com.tch.responsity.PaperRepository;
+import com.tch.service.PaperService;
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.data.domain.Example;
 
 import javax.persistence.*;
+import java.awt.print.Paper;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Builder
 @Data
 @Table(name = "paper")
-public class PaperImpl {
+public class PaperImpl implements PaperService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -88,4 +95,30 @@ public class PaperImpl {
     private String param24;
     
     private String param25;
+    
+    @Override
+    public PaperImpl getPaperById(int id) {
+       return SpringContextHolder.getBean(PaperRepository.class).findOne(id);
+    }
+    
+    @Override
+    public List<PaperImpl> getPaperByAttr(PaperImpl paper) {
+        return SpringContextHolder.getBean(PaperRepository.class).findAll(Example.of(paper));
+    }
+    
+    @Override
+    public void insertPaper(PaperImpl paper) {
+        SpringContextHolder.getBean(PaperRepository.class).saveAndFlush(paper);
+    }
+    
+    @Override
+    public void updateByIdSelective(PaperImpl paper) {
+        SpringContextHolder.getBean(PaperRepository.class).saveAndFlush(paper);
+    }
+    
+    
+    @Override
+    public void deleteById(int id) {
+        SpringContextHolder.getBean(PaperRepository.class).delete(id);
+    }
 }

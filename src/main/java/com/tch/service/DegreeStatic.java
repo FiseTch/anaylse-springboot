@@ -15,7 +15,7 @@ public interface DegreeStatic {
      * @return: DegreeStatic
      */
     DegreeStaticImpl getDegById(int id);
-   
+    
     /**
      * @param degreeStatic
      * @return
@@ -34,17 +34,7 @@ public interface DegreeStatic {
      * @Description: 插入一条记录（属性不允许为空）
      * @return: int
      */
-    int insertDegreeStatic(DegreeStaticImpl degreeStatic);
-    
-    /**
-     * @param degreeStatic
-     * @return
-     * @user: tongchaohua
-     * @Title: insertDegreeStaticSelective
-     * @Description: 插入一条记录（属性允许为空）
-     * @return: int
-     */
-    int insertDegreeStaticSelective(DegreeStaticImpl degreeStatic);
+    void insertDegreeStatic(DegreeStaticImpl degreeStatic);
     
     
     /**
@@ -55,17 +45,8 @@ public interface DegreeStatic {
      * @Description: 更新记录（属性允许为空除主键外）
      * @return: int
      */
-    int updateByIdSelective(DegreeStaticImpl degreeStatic);
+    void updateByIdSelective(DegreeStaticImpl degreeStatic);
     
-    /**
-     * @param degreeStatic
-     * @return
-     * @user: tongchaohua
-     * @Title: updateById
-     * @Description: 更新记录（属性不允许为空）
-     * @return: int
-     */
-    int updateById(DegreeStaticImpl degreeStatic);
     
     /**
      * @param id
@@ -75,5 +56,5 @@ public interface DegreeStatic {
      * @Description: 通过主键id删除记录
      * @return: int
      */
-    int deleteById(Integer id);
+    void deleteById(int id);
 }

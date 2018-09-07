@@ -31,31 +31,11 @@ public interface ReviewResult {
      * @param reviewResult
      * @return
      * @user: tongchaohua
-     * @Title: getGeneralRevByAttr
-     * @Description: 模糊查询
-     * @return: List<ReviewResult>
-     */
-    List<ReviewResultImpl> getGeneralRevByAttr(ReviewResultImpl reviewResult);
-    
-    /**
-     * @param reviewResult
-     * @return
-     * @user: tongchaohua
      * @Title: ReviewResult
      * @Description: 插入记录（属性不允许为空）
      * @return: int
      */
-    int insertReviewResult(ReviewResultImpl reviewResult);
-    
-    /**
-     * @param reviewResult
-     * @return
-     * @user: tongchaohua
-     * @Title: insertReviewResultSelective
-     * @Description: 插入记录（除主键外。其他属性允许为空）
-     * @return: int
-     */
-    int insertReviewResultSelective(ReviewResultImpl reviewResult);
+    void insertReviewResult(ReviewResultImpl reviewResult);
     
     
     /**
@@ -66,17 +46,8 @@ public interface ReviewResult {
      * @Description: 更新记录（除主键外。其他属性允许为空）
      * @return: int
      */
-    int updateByIdSelective(ReviewResultImpl reviewResult);
+    void updateByIdSelective(ReviewResultImpl reviewResult);
     
-    /**
-     * @param reviewResult
-     * @return
-     * @user: tongchaohua
-     * @Title: updateById
-     * @Description: 更新记录（属性不允许为空）
-     * @return: int
-     */
-    int updateById(ReviewResultImpl reviewResult);
     
     /**
      * @param id
@@ -86,5 +57,5 @@ public interface ReviewResult {
      * @Description: 删除记录
      * @return: int
      */
-    int deleteById(String id);
+    void deleteById(String id);
 }
