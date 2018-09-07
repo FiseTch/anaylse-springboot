@@ -3,7 +3,6 @@ package com.tch.test;
 import com.tch.TestApplicationTests;
 import com.tch.domain.TeacherImpl;
 import com.tch.responsity.TeacherRepository;
-import com.tch.service.Teacher;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

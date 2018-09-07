@@ -17,6 +17,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class IndexController {
     
+    @ApiOperation(value = "系统更新", httpMethod = "GET")
+    @RequestMapping("/analyse")
+    public String analyse() {
+        log.info("当前执行方法：*" + Thread.currentThread().getStackTrace()[1].getMethodName());
+        return "index";
+    }
+    
     @ApiOperation(value = "我的", httpMethod = "GET")
     @RequestMapping(value = "/index")
     public String index() {

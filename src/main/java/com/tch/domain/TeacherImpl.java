@@ -50,7 +50,6 @@ public class TeacherImpl implements Teacher {
     
     @Override
     public List<String> getAllTeacId() {
-        //:todo
         return SpringContextHolder.getBean(TeacherRepository.class).getAllTeacId();
     }
     
