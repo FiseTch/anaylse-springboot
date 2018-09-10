@@ -30,7 +30,7 @@ public class IndexController {
     @RequestMapping("/login_pre")
     public String preLogin() {
         log.info("当前执行方法：*" + Thread.currentThread().getStackTrace()[1].getMethodName());
-    
+        
         return "pre_login";
     }
     
