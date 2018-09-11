@@ -40,6 +40,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("swagger-ui.html")//浏览器前端访问路径
                 .addResourceLocations("classpath://META-INF/resources/");//对应的后端访问资源
+    
+        registry.addResourceHandler("index.html")//浏览器前端访问路径
+                .addResourceLocations("classpath:/static/**");//对应的后端访问资源
         super.addResourceHandlers(registry);
     }
     

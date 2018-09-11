@@ -1,8 +1,8 @@
 package com.tch.test;
 
 import com.tch.TestApplicationTests;
-import com.tch.domain.TeacherImpl;
-import com.tch.responsity.TeacherRepository;
+import com.tch.domain.security.UserImpl;
+import com.tch.responsity.UserRepository;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,14 +16,14 @@ import java.util.List;
 public class teacherTest extends TestApplicationTests {
     
     @Autowired
-    private TeacherRepository teacher;
+    private UserRepository teacher;
     
     @Test
     public void getAllId() {
-        TeacherImpl name = TeacherImpl.builder().id("test").password("12").name("tong").build();
+        UserImpl name = UserImpl.builder().id(10L).password("12").username("tong").build();
         teacher.saveAndFlush(name);
-        List<String> allTeacId = teacher.getAllTeacId();
-        for (String id : allTeacId) {
+        List<String> allUserId = teacher.getAllUserId();
+        for (String id : allUserId) {
             System.out.println(id);
         }
     }
