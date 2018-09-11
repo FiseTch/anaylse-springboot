@@ -92,6 +92,11 @@
             <artifactId>nekohtml</artifactId>
             <version>1.9.21</version>
         </dependency>
+        <dependency>
+            <groupId>com.tch</groupId>
+            <artifactId>test</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
 
     </dependencies>

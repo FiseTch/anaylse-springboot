@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class IndexController {
     
-    @ApiOperation(value = "系统更新", httpMethod = "POST")
+    @ApiOperation(value = "系统主页", httpMethod = "POST")
     @RequestMapping("/index")
     public String analyse() {
         log.info("当前执行方法：*" + Thread.currentThread().getStackTrace()[1].getMethodName());
@@ -34,7 +34,7 @@ public class IndexController {
         return "pre_login";
     }
     
-    @ApiOperation(value = "我的", httpMethod = "POST")
+    @ApiOperation(value = "我的空间", httpMethod = "POST")
     @RequestMapping(value = "/myPage")
     public String myPage() {
         log.info("当前执行方法：*" + Thread.currentThread().getStackTrace()[1].getMethodName());

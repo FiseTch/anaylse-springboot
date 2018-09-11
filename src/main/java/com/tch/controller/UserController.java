@@ -15,20 +15,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Api("用户信息管理")
 @Controller
-@RequestMapping()
+@RequestMapping("/user")
 @Slf4j
 public class UserController {
-    
+
     @Autowired
     UserRepository userRepository;
-    
-    
+
+
     @ApiOperation(value = "用户录入入口", httpMethod = "POST")
-    @RequestMapping("/user")
+    @RequestMapping("/index")
     public String userEntrance() {
-        log.info("当前执行方法：*" + Thread.currentThread().getStackTrace()[1].getMethodName() );
+        log.info("当前执行方法：*" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "user";
     }
-    
-    
+
+
 }
