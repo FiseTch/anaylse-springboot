@@ -1,11 +1,8 @@
 package com.tch.httpClient;
 
 
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
@@ -15,24 +12,25 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 
-import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class HttpClientUtil {
-
+    
     private static PoolingHttpClientConnectionManager connectionManager = null;
     private static HttpClientBuilder httpBuilder = null;
     private static RequestConfig requestConfig = null;
-
+    
     private static int MAXCONNECTION = 10;
-
+    
     private static int DEFAULTMAXCONNECTION = 5;
-
-    private static String IP = "cnivi.com.cn";
+    
+    private static String IP = "127.0.0.1";
     private static int PORT = 80;
-
+    
     static {
         //设置http的状态参数
         requestConfig = RequestConfig.custom()
@@ -40,7 +38,7 @@ public class HttpClientUtil {
                 .setConnectTimeout(5000)
                 .setConnectionRequestTimeout(5000)
                 .build();
-
+        
         HttpHost target = new HttpHost(IP, PORT);
         connectionManager = new PoolingHttpClientConnectionManager();
         connectionManager.setMaxTotal(MAXCONNECTION);//客户端总并行链接最大数
@@ -49,13 +47,13 @@ public class HttpClientUtil {
         httpBuilder = HttpClients.custom();
         httpBuilder.setConnectionManager(connectionManager);
     }
-
+    
     public static CloseableHttpClient getConnection() {
         CloseableHttpClient httpClient = httpBuilder.build();
         return httpClient;
     }
-
-
+    
+    
     public static HttpUriRequest getRequestMethod(Map<String, String> map, String url, String method) {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         Set<Map.Entry<String, String>> entrySet = map.entrySet();
@@ -77,27 +75,7 @@ public class HttpClientUtil {
         }
         return reqMethod;
     }
-
-    public static void printResponseMessage(HttpResponse response) throws IOException {
-        if (response.getStatusLine().getStatusCode() == 200) {
-            HttpEntity resEntity = response.getEntity();
-            String message = EntityUtils.toString(resEntity, "utf-8");
-            System.out.println(message);
-        } else {
-            System.out.println("请求失败");
-        }
-    }
-
-
-    public static void main(String args[]) throws IOException {
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("account", "");
-        map.put("password", "");
-
-        HttpClient client = getConnection();
-        HttpUriRequest post = getRequestMethod(map, "http://cnivi.com.cn/login", "post");
-        HttpResponse response = client.execute(post);
-        printResponseMessage(response);
-    }
+    
+    
 }
 

@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -28,7 +29,7 @@ public class MockTest extends TestApplicationTests {
     private MockMvc mvc;
     
     @Before
-    public void setUp(){
+    public void setUp() {
         mvc = MockMvcBuilders.webAppContextSetup(context).build();  //构造MockMvc
         
     }

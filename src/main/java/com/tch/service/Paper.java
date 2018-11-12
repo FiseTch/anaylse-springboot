@@ -4,7 +4,7 @@ import com.tch.domain.PaperImpl;
 
 import java.util.List;
 
-public interface PaperService {
+public interface Paper {
     
     /**
      * @param id

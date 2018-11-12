@@ -1,15 +1,13 @@
 package com.tch.domain;
 
 import com.tch.SpringContextHolder;
-import com.tch.responsity.PaperDetailRepository;
 import com.tch.responsity.PaperRepository;
-import com.tch.service.PaperService;
+import com.tch.service.Paper;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.domain.Example;
 
 import javax.persistence.*;
-import java.awt.print.Paper;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +15,7 @@ import java.util.List;
 @Builder
 @Data
 @Table(name = "paper")
-public class PaperImpl implements PaperService {
+public class PaperImpl implements Paper {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
