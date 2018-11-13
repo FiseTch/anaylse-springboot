@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @author Tongch
@@ -15,7 +16,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "u_school")
 @Data
 @Builder
-public class UserSchoolImpl {
+public class UserSchoolImpl implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

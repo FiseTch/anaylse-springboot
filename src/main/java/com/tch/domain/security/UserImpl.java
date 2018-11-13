@@ -1,30 +1,34 @@
 package com.tch.domain.security;
 
 import com.tch.SpringContextHolder;
+import com.tch.domain.UserMessageImpl;
 import com.tch.responsity.UserRepository;
 import com.tch.service.User;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 import org.springframework.data.domain.Example;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
 @Data
 @Table(name = "sys_user")
 @Builder
-public class UserImpl implements User {
+@NoArgsConstructor
+@AllArgsConstructor//指定无参与全参构造函数
+public class UserImpl implements User, Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    @NotNull
-    @Column(unique = true)
-    private Long uid;
+    @Column(name = "user_no")
+    private String userNo;
     
     @NotNull
     @Column(unique = true)
@@ -35,6 +39,7 @@ public class UserImpl implements User {
     
     private String tel;
     
+    @Column(name = "id_card")
     private String idCard;
     
     private String sex;
@@ -45,14 +50,20 @@ public class UserImpl implements User {
     
     private String depart;
     
+    @Column(name = "hire_date")
     private Date hireDate;
     
     private String subject;
     
+    @OneToMany(fetch = FetchType.EAGER)//指定一对多抓取策略
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)//指定级联操作
+    @JoinColumn(name = "user_no")//指定外键
+    @OrderBy("write_time desc")//按messageId降序排列
+    private Set<UserMessageImpl> messageSet;
     
     @Override
-    public UserImpl getUserById(Long id) {
-        return SpringContextHolder.getBean(UserRepository.class).findOne(id);
+    public UserImpl getUserById() {
+        return SpringContextHolder.getBean(UserRepository.class).findOne(this.userNo);
     }
     
     @Override
@@ -62,22 +73,22 @@ public class UserImpl implements User {
     
     @Override
     public UserImpl getUserByAttr(UserImpl teacher) {
-        return SpringContextHolder.getBean(UserRepository.class).findOne(Example.of(teacher));
+        return SpringContextHolder.getBean(UserRepository.class).findOne(Example.of(this));
     }
     
     @Override
-    public void insertUser(UserImpl teacher) {
-        SpringContextHolder.getBean(UserRepository.class).saveAndFlush(teacher);
+    public void insertUser() {
+        SpringContextHolder.getBean(UserRepository.class).saveAndFlush(this);
     }
     
     @Override
-    public void updateByIdSelective(UserImpl teacher) {
-        SpringContextHolder.getBean(UserRepository.class).saveAndFlush(teacher);
+    public void updateByIdSelective() {
+        SpringContextHolder.getBean(UserRepository.class).saveAndFlush(this);
     }
     
     
     @Override
-    public void deleteById(Long id) {
-        SpringContextHolder.getBean(UserRepository.class).delete(id);
+    public void deleteById() {
+        SpringContextHolder.getBean(UserRepository.class).delete(this.userNo);
     }
 }

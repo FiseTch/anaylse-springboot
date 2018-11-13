@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Date;
 @Table(name = "u_group")
 @Data
 @Builder
-public class UserGroupImpl {
+public class UserGroupImpl implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

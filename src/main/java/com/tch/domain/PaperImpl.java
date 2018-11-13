@@ -8,6 +8,7 @@ import lombok.Data;
 import org.springframework.data.domain.Example;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
 @Builder
 @Data
 @Table(name = "paper")
-public class PaperImpl implements Paper {
+public class PaperImpl implements Paper, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -95,28 +96,28 @@ public class PaperImpl implements Paper {
     private String param25;
     
     @Override
-    public PaperImpl getPaperById(int id) {
-       return SpringContextHolder.getBean(PaperRepository.class).findOne(id);
+    public PaperImpl getPaperById() {
+        return SpringContextHolder.getBean(PaperRepository.class).findOne(this.id);
     }
     
     @Override
-    public List<PaperImpl> getPaperByAttr(PaperImpl paper) {
-        return SpringContextHolder.getBean(PaperRepository.class).findAll(Example.of(paper));
+    public List<PaperImpl> getPaperByAttr() {
+        return SpringContextHolder.getBean(PaperRepository.class).findAll(Example.of(this));
     }
     
     @Override
-    public void insertPaper(PaperImpl paper) {
-        SpringContextHolder.getBean(PaperRepository.class).saveAndFlush(paper);
+    public void insertPaper() {
+        SpringContextHolder.getBean(PaperRepository.class).saveAndFlush(this);
     }
     
     @Override
-    public void updateByIdSelective(PaperImpl paper) {
-        SpringContextHolder.getBean(PaperRepository.class).saveAndFlush(paper);
+    public void updateByIdSelective() {
+        SpringContextHolder.getBean(PaperRepository.class).saveAndFlush(this);
     }
     
     
     @Override
-    public void deleteById(int id) {
-        SpringContextHolder.getBean(PaperRepository.class).delete(id);
+    public void deleteById() {
+        SpringContextHolder.getBean(PaperRepository.class).delete(this.id);
     }
 }

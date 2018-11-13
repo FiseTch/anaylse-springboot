@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author Tongch
@@ -14,7 +15,7 @@ import javax.persistence.*;
 @Table(name = "role_menu")
 @Data
 @Builder
-public class RoleMenu {
+public class RoleMenu implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

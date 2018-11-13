@@ -1,6 +1,7 @@
 package com.tch.domain;
 
 import com.tch.SpringContextHolder;
+import com.tch.domain.security.UserImpl;
 import com.tch.responsity.MessageRepository;
 import com.tch.service.Message;
 import lombok.AllArgsConstructor;
@@ -13,6 +14,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -28,7 +30,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserMessageImpl implements Message {
+public class UserMessageImpl implements Message, Serializable {
     
     @Id
     @Column(name = "message_id")
@@ -43,8 +45,6 @@ public class UserMessageImpl implements Message {
     @Column(name = "write_user_no")
     private String writeUserNo;
     
-    @Column(name = "read_user_no")
-    private String readUserNo;
     
     @Column(name = "write_time")
     private Date writeTime;
@@ -52,6 +52,7 @@ public class UserMessageImpl implements Message {
     private int praise;//点赞数
     
     private String description;
+    
     
     @Override
     public List<UserMessageImpl> getAllMessage() {

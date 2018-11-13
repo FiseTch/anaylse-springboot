@@ -8,12 +8,13 @@ import lombok.Data;
 import org.springframework.data.domain.Example;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "degree_static")
 @Builder
 @Data
-public class DegreeStaticImpl implements DegreeStatic {
+public class DegreeStaticImpl implements DegreeStatic, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -23,29 +24,29 @@ public class DegreeStaticImpl implements DegreeStatic {
     private String grade;
     
     @Override
-    public DegreeStaticImpl getDegById(int id) {
-        return SpringContextHolder.getBean(DegreeStaticRepository.class).findOne(id);
+    public DegreeStaticImpl getDegById() {
+        return SpringContextHolder.getBean(DegreeStaticRepository.class).findOne(this.id);
     }
     
     @Override
-    public DegreeStaticImpl getDegByAttr(DegreeStaticImpl degreeStatic) {
-        return SpringContextHolder.getBean(DegreeStaticRepository.class).findOne(Example.of(degreeStatic));
+    public DegreeStaticImpl getDegByAttr() {
+        return SpringContextHolder.getBean(DegreeStaticRepository.class).findOne(Example.of(this));
     }
     
     @Override
-    public void insertDegreeStatic(DegreeStaticImpl degreeStatic) {
-        SpringContextHolder.getBean(DegreeStaticRepository.class).saveAndFlush(degreeStatic);
-    }
-    
-    
-    @Override
-    public void updateByIdSelective(DegreeStaticImpl degreeStatic) {
-        SpringContextHolder.getBean(DegreeStaticRepository.class).saveAndFlush(degreeStatic);
+    public void insertDegreeStatic() {
+        SpringContextHolder.getBean(DegreeStaticRepository.class).saveAndFlush(this);
     }
     
     
     @Override
-    public void deleteById(int id) {
-        SpringContextHolder.getBean(DegreeStaticRepository.class).delete(id);
+    public void updateByIdSelective() {
+        SpringContextHolder.getBean(DegreeStaticRepository.class).saveAndFlush(this);
+    }
+    
+    
+    @Override
+    public void deleteById() {
+        SpringContextHolder.getBean(DegreeStaticRepository.class).delete(this.id);
     }
 }

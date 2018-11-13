@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
+ * 加事务注解是为了让删改更新操作能够成功
  * @author Tongch
  * @version 1.0
  * @time 2018/8/16 10:14

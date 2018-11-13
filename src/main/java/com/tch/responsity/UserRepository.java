@@ -11,7 +11,7 @@ import java.util.List;
  * @version 1.0
  * @time 2018/9/6 17:24
  */
-public interface UserRepository extends JpaRepository<UserImpl, Long> {
+public interface UserRepository extends JpaRepository<UserImpl, String> {
     
     //nativeQuery:属性的设置，是表明该方法中的sql以数据库的sql语句格式对待。
     

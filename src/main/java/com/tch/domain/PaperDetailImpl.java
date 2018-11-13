@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +20,7 @@ import java.util.List;
 @Table(name = "paper_detail")
 @Builder
 @Data
-public class PaperDetailImpl implements PaperDetail {
+public class PaperDetailImpl implements PaperDetail, Serializable {
     @Id
     @Column(name = "paper_id")
     private String paperId;
@@ -51,34 +52,34 @@ public class PaperDetailImpl implements PaperDetail {
     private String term;
     
     @Override
-    public PaperDetailImpl getPaperDetailById(String paperId) {
-        return SpringContextHolder.getBean(PaperDetailRepository.class).findOne(paperId);
+    public PaperDetailImpl getPaperDetailById() {
+        return SpringContextHolder.getBean(PaperDetailRepository.class).findOne(this.paperId);
     }
     
     @Override
-    public List<PaperDetailImpl> getPaperDetailByAttr(PaperDetailImpl paperDetail) {
-        return SpringContextHolder.getBean(PaperDetailRepository.class).findAll(Example.of(paperDetail));
-    }
-    
-    
-    @Override
-    public void insertPaperDetail(PaperDetailImpl paperDetail) {
-        SpringContextHolder.getBean(PaperDetailRepository.class).saveAndFlush(paperDetail);
-    }
-    
-    @Override
-    public void insertPaperDetailSelective(PaperDetailImpl paperDetail) {
-        SpringContextHolder.getBean(PaperDetailRepository.class).saveAndFlush(paperDetail);
+    public List<PaperDetailImpl> getPaperDetailByAttr() {
+        return SpringContextHolder.getBean(PaperDetailRepository.class).findAll(Example.of(this));
     }
     
     
     @Override
-    public void updateById(PaperDetailImpl paperDetail) {
-        SpringContextHolder.getBean(PaperDetailRepository.class).saveAndFlush(paperDetail);
+    public void insertPaperDetail() {
+        SpringContextHolder.getBean(PaperDetailRepository.class).saveAndFlush(this);
     }
     
     @Override
-    public void deleteById(String paperId) {
-        SpringContextHolder.getBean(PaperDetailRepository.class).delete(paperId);
+    public void insertPaperDetailSelective() {
+        SpringContextHolder.getBean(PaperDetailRepository.class).saveAndFlush(this);
+    }
+    
+    
+    @Override
+    public void updateById() {
+        SpringContextHolder.getBean(PaperDetailRepository.class).saveAndFlush(this);
+    }
+    
+    @Override
+    public void deleteById() {
+        SpringContextHolder.getBean(PaperDetailRepository.class).delete(this.paperId);
     }
 }

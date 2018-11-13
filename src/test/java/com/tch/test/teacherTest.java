@@ -20,7 +20,7 @@ public class teacherTest extends TestApplicationTests {
     
     @Test
     public void getAllId() {
-        UserImpl name = UserImpl.builder().id(10L).password("12").username("tong").build();
+        UserImpl name = UserImpl.builder().userNo("10").password("12").username("tong").build();
         teacher.saveAndFlush(name);
         List<String> allUserId = teacher.getAllUserId();
         for (String id : allUserId) {
