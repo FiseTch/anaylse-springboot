@@ -47,6 +47,7 @@ public class IndexController {
     public String killTime() {
         log.info("当前执行方法：*" + Thread.currentThread().getStackTrace()[1].getMethodName());
         
+        
         return "killTime";
     }
     
